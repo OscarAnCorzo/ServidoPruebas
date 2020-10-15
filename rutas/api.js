@@ -1,12 +1,10 @@
+'use strict'
+
 const express = require('express');
+var controlador1 = require('./../controladores/controller.prueba');
 
 var api = express.Router();
 
-api.get('/api.prueba', (req, res) => {
-   res.send({
-      nombre: 'nombre1',
-      edad: 32
-   });
-});
+api.get('/api.prueba', controlador1.controllerPrueba);
 
 module.exports = api;
