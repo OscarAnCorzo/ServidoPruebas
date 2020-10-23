@@ -2,7 +2,7 @@
 
 
 
-module.exports = (sequelize, type) => {
+module.exports = (sequelize) => {
    return sequelize.define(
       'programa_academico',
       {},
