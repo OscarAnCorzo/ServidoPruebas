@@ -1,10 +1,10 @@
 'use strict'
 
 const express = require('express');
-// var rutasGestionAcademica = require('./rutas/ruta.GestionAcademica')
+
 var api = express.Router();
-api.post('/ProgramaAcademico', require('./controladores/controllerProgramaAcademico'));
-// enrutador.use('/api.GestionAula', rutasGestionAula);
-// enrutador.use('/api.Convenios', rutasConvenios);
+api.post('/FormularioLegalizacion', require('./controladores/controllerFormularioLegalizacion'));
+// api.post('/GruposHomologacion', require('./controladores/controllerGruposHomologacion'));
+// api.post('/SubAcademica', require('./controladores/controllerSubAcademica'));
 
 module.exports = api;

@@ -5,24 +5,11 @@
 module.exports = (sequelize, type) => {
    return sequelize.define(
       'programa_academico',
+      {},
       {
-         codigo:{
-            type: type.INTEGER
-         },
-         nombre:{
-            type: type.STRING
-         },
-         codigo_unidad:{
-            type: type.INTEGER
-         },
-         codigo_modalidad:{
-            type: type.INTEGER
-         },
-         id_plan_estudio_activo:{
-            type: type.INTEGER
-         }
-      },
-      {tableName: 'programa_academico'}
+         tableName: 'programa_academico',
+         timestamps: false
+      }
    );
 }
 
