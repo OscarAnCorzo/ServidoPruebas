@@ -13,18 +13,13 @@
 
 // // module.exports = conexion;
 
-module.exports = async () => {
-   const config = require('./../config');
-   const { Sequelize } = require('sequelize');
-   const sequelize = new Sequelize(config.dbName, config.dbUser, config.dbPassword, {
-      host: config.dbHost,
-      dialect: 'postgres', /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
-      port: config.dbPort,
-      logging: false // para no mostrar por consola las sentencias SQL ejecutadas.
-   });
-   
-   await sequelize.authenticate();
-   
-   return sequelize;
+const config = require('./../config');
+const { Sequelize } = require('sequelize');
+const conexion = new Sequelize(config.dbName, config.dbUser, config.dbPassword, {
+   host: config.dbHost,
+   dialect: 'postgres', /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
+   port: config.dbPort,
+   logging: false // para no mostrar por consola las sentencias SQL ejecutadas.
+});
 
-}
+module.exports = conexion;

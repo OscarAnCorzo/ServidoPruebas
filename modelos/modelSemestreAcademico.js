@@ -16,8 +16,22 @@ module.exports = (db) => {
   const { Model } = require('sequelize');
   
   class SemestreAcademico extends Model{
-    
-    static async getId(){
+
+
+    /**
+     * @method getId para obtener el id de todos los registros de semestre_academico
+     * 
+     * @param { String } parametro No se está usando 
+     * 
+     * @returns { List } resultado Lista de objetos que contienen un id de semestre_academico respectivamente
+     * 
+     * @used_in
+     *       - controllerFormularioLegalizacion -> case: buscar
+     *       - ******************************** -> case: ******
+     * 
+     * @author Oscar Corzo
+     */
+    static async getId(parametro){
       var [resultado, metadata] = await db.query("SELECT id from semestre_academico");
       return resultado;
     }
