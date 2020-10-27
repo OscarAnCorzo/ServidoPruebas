@@ -15,7 +15,6 @@
 
 
 module.exports = (db) => {
-
    const { Model } = require('sequelize');
    
    class ProgramaAcademico extends Model{}

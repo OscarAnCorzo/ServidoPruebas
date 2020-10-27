@@ -9,5 +9,6 @@ module.exports = {
    dbHost: 'localhost',
    dbName: 'ipred_plataformatic',
    dbPassword: '123456',
-   dbPort: '5432'
+   dbPort: '5432',
+   semillaJWT: 'estaEsLaSemillaDeDesarrollo'
 }

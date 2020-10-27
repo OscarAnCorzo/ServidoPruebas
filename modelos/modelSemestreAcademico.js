@@ -17,17 +17,15 @@ module.exports = (db) => {
   
   class SemestreAcademico extends Model{
 
-
     /**
      * @method getId para obtener el id de todos los registros de semestre_academico
      * 
      * @param { String } parametro No se está usando 
      * 
-     * @returns { List } resultado Lista de objetos que contienen un id de semestre_academico respectivamente
+     * @returns { List } Una lista de objetos que contienen un id de semestre_academico respectivamente
      * 
      * @used_in
      *       - controllerFormularioLegalizacion -> case: buscar
-     *       - ******************************** -> case: ******
      * 
      * @author Oscar Corzo
      */

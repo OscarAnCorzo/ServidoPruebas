@@ -4,10 +4,14 @@
 const conexion = require('./conexionDB');
 const ProgramaAcademicoModel = require('./../modelos/modelProgramaAcademico');
 const SemestreAcademicoModel = require('./../modelos/modelSemestreAcademico');
+const UsuarioPlataformaModel = require('./../modelos/modelUsuarioPlataforma');
+const UsuarioPlataformaRolModel = require('./../modelos/modelUsuarioPlataformaRol');
 
 // cargar los modelos
-const ProgramaAcademico = ProgramaAcademicoModel(conexion);
-const SemestreAcademico = SemestreAcademicoModel(conexion);
+const ProgramaAcademico    = ProgramaAcademicoModel(conexion);
+const SemestreAcademico    = SemestreAcademicoModel(conexion);
+const UsuarioPlataforma    = UsuarioPlataformaModel(conexion);
+const UsuarioPlataformaRol = UsuarioPlataformaRolModel(conexion);
 
 conexion.sync()
    .then(() => {
@@ -20,7 +24,9 @@ module.exports = {
    conexion,
    modelos: {
       ProgramaAcademico,
-      SemestreAcademico   
+      SemestreAcademico,
+      UsuarioPlataforma,
+      UsuarioPlataformaRol   
    }
 }
 
